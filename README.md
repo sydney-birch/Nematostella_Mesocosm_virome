@@ -8,5 +8,10 @@ Where NS	;	ME	;	NH	;	MA 	; SC ;	FL animals were sampled at our intial time point
 
 Our Main study question is: Does the origin of location impact the type and diversity of viruses and bacteria that assoiciate with Nematostella? 
 
-
+Virome Pipeline overview: 
+*We are interested to see if anemones from different locations assoiciate with viruses differently which is why we are sequencing the virome.*
+1) We extracted RNA and DNA using the Allprep RNA/DNA mini kit
+2) We created libraries for total RNAseq using the Tecan Universal Plus total RNA-seq with NuQuant kit with an N. vectensis rRNA depletion step
+3) We sequenced samples using NovaseqX
+4) 
 
