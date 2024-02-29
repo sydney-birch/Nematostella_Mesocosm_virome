@@ -2,20 +2,24 @@
 
 ## Prep work: 
 A) Transfer over all data and adjust names by running the change_raw_fq_file_names.py with name_change.txt --> has the conversion of names from admera
-'./change_raw_fq_file_names.py -a name_change.txt -b Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8'
+
+`./change_raw_fq_file_names.py -a name_change.txt -b Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8`
 			
 B) Download genome 
+
  `wget https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_932526225.1/`
 	
 	
 ## 1) Run fastqc
-Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads dir   
+Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads dir (1_fastqc.slurm)  
+
   `./1_fastqc.py -a ../../../1_fastqc/before_trim`
+  
 *output in fastqc dir --> before_trim dir*
 	
 	
 ## 2) Trimm reads and re-run fastqc 
-  A) Run trimmomatic slurm and .py to trim the adaptors (run in 2_trimmomatic dir) - the script loops thru and runs for each sample
+  A) Run trimmomatic to trim the adaptors (run in 2_trimmomatic dir) - the script loops thru and runs for each sample (2.A_trimmommatic.slurm)
 
 `./2.A_trimmomatic.py -a ../raw_reads_2-19-24/admera_seq_run/Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8 -b ../../../2_trimmomatic/`
 
@@ -27,8 +31,10 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 		#We are interested in the _1P and _2P files (paired files)
 
    B) Re-Run Fastqc in the fastqc dir (2.B_fastqc.slurm) 
-      `./2.B_fastqc.py -a ../1_fastqc/after_trim -b ../2_trimmomatic`
-       *output goes to fastqc dir - after_trim dir*  
+   
+`./2.B_fastqc.py -a ../1_fastqc/after_trim -b ../2_trimmomatic`
+      
+*output goes to fastqc dir - after_trim dir*  
 	
 	
 ## 3) Map reads to genome to get two pots of data --> mapped and unmapped
