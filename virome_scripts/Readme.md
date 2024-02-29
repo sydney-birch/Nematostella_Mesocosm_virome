@@ -3,7 +3,7 @@
 ## Prep work: 
 A) Transfer over all data and adjust names by running the change_raw_fq_file_names.py with name_change.txt --> has the conversion of names from admera (we sequenced 8 samples at UNCC intially - all other samples were sent to admera for sequencing)  
 
-`./change_raw_fq_file_names.py -a name_change.txt -b Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8`
+`./0_change_raw_fq_file_names.py -a 0_name_change.txt -b Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8`
 
    
 B) Download genome 
