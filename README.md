@@ -16,6 +16,7 @@ Our Main study question is:
 2) We created libraries for total RNAseq using the Tecan Universal Plus total RNA-seq with NuQuant kit with an N. vectensis rRNA depletion step
 3) We sequenced samples using NovaseqX
 4) Prep work: Run Fastqc, trim reads, and run fastqc again
-5) Map reads to the genome to get two pots of data --> mapped (Nematostella reads) and unmapped (virome/microbe reads)   
-   ...For virome (unmapped reads) - map back to the genome multiple times until 0 reads align    
+5) Map reads to the genome to get two pots of data --> mapped (Nematostella reads) and unmapped (virome/microbe reads)    
+- For virome (unmapped reads) - map back to the genome multiple times until 0 reads align
+- For Nematostella transcriptome (mapped reads) - use mapped reads from 1st alignment 
 
