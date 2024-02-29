@@ -1,37 +1,37 @@
-## Overview of nematostella mesocosom transcriptome pipline
+# Overview of nematostella mesocosom transcriptome pipline
 
-# Prep work: 
+## Prep work: 
 A) Transfer over all data and adjust names by running the change_raw_fq_file_names.py with name_change.txt --> has the conversion of names from admera
 './change_raw_fq_file_names.py -a name_change.txt -b Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8'
 			
 B) Download genome 
- 'wget https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_932526225.1/'
+ `wget https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_932526225.1/`
 	
 	
-### 1) Run fastqc
+## 1) Run fastqc
 Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads dir   
-  './1_fastqc.py -a ../../../1_fastqc/before_trim'
+  `./1_fastqc.py -a ../../../1_fastqc/before_trim`
 *output in fastqc dir --> before_trim dir*
 	
 	
-### 2) Trimm reads and re-run fastqc 
+## 2) Trimm reads and re-run fastqc 
   A) Run trimmomatic slurm and .py to trim the adaptors (run in 2_trimmomatic dir) - the script loops thru and runs for each sample
 
-'./2.A_trimmomatic.py -a ../raw_reads_2-19-24/admera_seq_run/Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8 -b ../../../2_trimmomatic/'
+`./2.A_trimmomatic.py -a ../raw_reads_2-19-24/admera_seq_run/Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8 -b ../../../2_trimmomatic/`
 
-	*Output - you get 4 files in this format in the 2_trimmomatic dir for each sample:*
-	NH_T0-SC_B5_filtered_1P.fq.gz
-	NH_T0-SC_B5_filtered_1U.fq.gz
-	NH_T0-SC_B5_filtered_2P.fq.gz
-	NH_T0-SC_B5_filtered_2U.fq.gz
-	*We are interested in the _1P and _2P files (paired files)*
+	Output - you get 4 files in this format in the 2_trimmomatic dir for each sample:
+	    NH_T0-SC_B5_filtered_1P.fq.gz
+	    NH_T0-SC_B5_filtered_1U.fq.gz
+	    NH_T0-SC_B5_filtered_2P.fq.gz
+	    NH_T0-SC_B5_filtered_2U.fq.gz
+		#We are interested in the _1P and _2P files (paired files)
 
    B) Re-Run Fastqc in the fastqc dir (2.B_fastqc.slurm) 
-      './2.B_fastqc.py -a ../1_fastqc/after_trim -b ../2_trimmomatic'
+      `./2.B_fastqc.py -a ../1_fastqc/after_trim -b ../2_trimmomatic`
        *output goes to fastqc dir - after_trim dir*  
 	
 	
-### 3) Map reads to genome to get two pots of data --> mapped and unmapped
+## 3) Map reads to genome to get two pots of data --> mapped and unmapped
 	 Run HISAT2 and use sam tools to get mapped (1st alignment) and unmapped reads
 		 Re-align the unmapped - run 2 alignments with HISAT2 then 2 alignments with bowtie
 		
