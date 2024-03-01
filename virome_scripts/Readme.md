@@ -78,10 +78,9 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 			sbatch 3.B_samtools_processing.slurm
 			./3.B_samtools_processing.py -b 1
 
-                         The actual samtools code run in script: 
-			 samtools view Nematostella_genome_ali_{0}_*.sam -f 0x4 -h -b -o unalign_reads.bam
-			 samtools collate -u -O unalign_reads.bam | \
-        samtools fastq -1 unaligned_{0}_{1}_ali_paired1.fq -2 unaligned_{0}_{1}_ali_paired2.fq -0 /dev/null -s /dev/null -n
+                         The actual samtools code run in script:  
+			 	samtools view Nematostella_genome_ali_{0}_*.sam -f 0x4 -h -b -o unalign_reads.bam
+				samtools collate -u -O unalign_reads.bam | samtools fastq -1 unaligned_{0}_{1}_ali_paired1.fq -2 unaligned_{0}_{1}_ali_paired2.fq -0 /dev/null -s /dev/null -n
 	
 				## Output: 2 fastq files in each sample name dir (unaligned_{sample_name}_1_ali_paired1.fq)
 						
@@ -109,7 +108,7 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 			./3.D_bowtie_ali_initial.py -b 3 -c 4th_ali_BT
 
       			The actual code run in script: 
-	 		bowtie2 -q -p 12 --very-sensitive-local -x ../Nematostella_genome -1 {sample_name}_paired1.fq -2 {sample_name}_paired2.fq -S Nematostella_genome_BT_ali_{0}_{1}.sam".format
+	 			bowtie2 -q -p 12 --very-sensitive-local -x ../Nematostella_genome -1 {sample_name}_paired1.fq -2 {sample_name}_paired2.fq -S Nematostella_genome_BT_ali_{0}_{1}.sam".format
     
 				# Output: sam file with BT_ali_3 in a dir in next ali dir (4th_ali dir) - it makes the fourth ali dir and all sub dirs which contain sam files (Nematostella_genome_BT_ali_3_{1}.sam)
 
