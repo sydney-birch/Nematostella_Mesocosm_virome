@@ -132,5 +132,21 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 			sbatch 3.E_samtools_processing_BT.slurm
 			./3.E_samtools_processing_BT.py -b 4
 				## Output: 2 fastq files in each sample name dir (unaligned_{sample_name}_4_ali_paired1.fq)
-		
+ ### B) Get mapped reads (Nematostella reads) and move unmapped reads into next step dir (RNA filtration)
+     First, make 3 dirs: 
+        mkdir /Nematostella_transcriptomics/4_RNA_filt
+        mkdir /Nematostella_transcriptomics/4_RNA_filt/mapped_fastq_files  
+	mkdir /Nematostella_transcriptomics/4_RNA_filt/unmapped_fastq_files 
+
+
+     Next, Run samtools to make fastq files for each sample of the MAPPED reads to the genome from the first alignment (in 2nd_ali dir)
+        sbatch 3.H_samtools_mapped_reads.slurm
+	./3.H_samtools_mapped_reads.py -b 1 
+		#Output: 2 fastq files (aligned_{sample_name}_1_ali_paired1.fastq) placed in 4_RNA_filt/mapped_fastq_files
+
+
+     Move Unmapped reads into RNA filtration main Dir	
+	sbatch 3.G_mv_fastqs.slurm
+	./3.G_mv_fastqs_v2.py -b 4 -c 4_RNA_filt
+		#Output: all unmapped fastqs will be moved to the RNA_filt unmapped_fastq_files dir 
 	
