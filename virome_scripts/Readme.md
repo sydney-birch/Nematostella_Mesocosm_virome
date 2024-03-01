@@ -1,7 +1,10 @@
 # Overview of nematostella mesocosom transcriptome pipline
 
 ## Prep work: 
-A) Transfer over all data and adjust names by running the change_raw_fq_file_names.py with name_change.txt --> has the conversion of names from admera (we sequenced 8 samples at UNCC intially - all other samples were sent to admera for sequencing)  
+A) Transfer over all data and adjust names by running the change_raw_fq_file_names.py with name_change.txt --> has the conversion of names from admera (we sequenced 8 samples at UNCC intially - all other samples were sent to admera for sequencing)    
+
+The admera fastq name Format: 21081FL-06-02-11_S27_L002_R1_001.fastq.gz 
+Changed to: NH_T14-SC_B3_S27_L002_R1_001.fastq.gz    
 
 `./0_change_raw_fq_file_names.py -a 0_name_change.txt -b Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8`
 
@@ -15,7 +18,10 @@ B) Download genome
 ## 1) Run fastqc
 Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads dir (1_fastqc.slurm)  
 
-  `./1_fastqc.py -a ../../../1_fastqc/before_trim`
+  `./1_fastqc.py -a ../../../1_fastqc/before_trim`    
+  
+      The actual line of code for fastqc: 
+      fastqc {fastq_file} -o ../../../1_fastqc/before_trim
   
 *output in fastqc dir --> before_trim dir*
 
@@ -24,8 +30,12 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 ## 2) Trimm reads and re-run fastqc 
   A) Run trimmomatic to trim the adaptors (run in 2_trimmomatic dir) - the script loops thru and runs for each sample (2.A_trimmommatic.slurm)
 
-`./2.A_trimmomatic.py -a ../raw_reads_2-19-24/admera_seq_run/Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8 -b ../../../2_trimmomatic/`
+`./2.A_trimmomatic.py -a ../raw_reads_2-19-24/admera_seq_run/Fastq-021324-XP-fcB-22HGNTLT3-L001-I8I8 -b ../../../2_trimmomatic/`   
 
+	The actual line of code for trimmomatic used: 
+ 
+ 	java -jar /apps/pkg/trimmomatic/0.39/trimmomatic-0.39.jar PE -phred33 -threads 4 {path_to_R1} {path_to_R2} -baseout {Sample_name}_filtered.fq.gz ILLUMINACLIP:/apps/pkg/trimmomatic/0.39/adapters/TruSeq3-PE-2.fa:1:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36    
+  
 	Output - you get 4 files in this format in the 2_trimmomatic dir for each sample:
 	    NH_T0-SC_B5_filtered_1P.fq.gz
 	    NH_T0-SC_B5_filtered_1U.fq.gz
