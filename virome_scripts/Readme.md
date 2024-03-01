@@ -57,28 +57,44 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 
  
 	
-## 3) Map reads to genome to get two pots of data --> mapped and unmapped
-	Run HISAT2 and use sam tools to get mapped (1st alignment) and unmapped reads
-		Re-align the unmapped - run 2 alignments with HISAT2 then 2 alignments with bowtie
-		
+## 3) Map reads to genome to get two pots of data --> mapped and unmapped    
+
+   ### A) Get unmapped reads (non Nematostella reads aka viral/microbial reads)
+
+	Map reads (HISAT2 and Bowtie) and use sam tools to get mapped (1st alignment) and unmapped reads
+		To get unmapped reads (All non-nematostella reads), Re-align the unmapped multiple times (4x total) to the genome - run 2 alignments with HISAT2 then 2 alignments with bowtie using high sensitivity settings
+
+  
 	#1st alignment - HISAT2 
 		#1st Ali - (run slurm in 1st_ali_2-20-24): 
 			./3.A_initial_hisat2_v2.py -a ../../2_trimmomatic -b 1 -c 2nd_ali -d ../3_HISAT2/1st_ali_2-20-24/
+                         
+			 The actual hisat2 code run in script: 
+			 hisat2 -q -p 12 -x ../Nematostella_genome -1 {path_to_R1}_filtered_1P.fq.gz -2 {path_to_R2}_filtered_2P.fq.gz -S Nematostella_genome_ali_{alignment_#}_{Sample_Name}.sam
 				## Output: sam file with _ali_1 in a dir in next ali dir (2nd_ali dir) - it makes the second ali dir and all sub dirs which contain sam files (Nematostella_genome_ali_1_{1}.sam)		
-		
-		# run sam tools - make fastq files to be used in second ali (Run slurm in 2nd_ali dir)
+
+  
+		# run sam tools - make fastq files to be used in second ali of all reads that did NOT map to the genome (Run slurm in 2nd_ali dir)
 			sbatch 3.B_samtools_processing.slurm
 			./3.B_samtools_processing.py -b 1
+
+                         The actual samtools code run in script: 
+			 samtools view Nematostella_genome_ali_{0}_*.sam -f 0x4 -h -b -o unalign_reads.bam
+			 samtools collate -u -O unalign_reads.bam | \
+        samtools fastq -1 unaligned_{0}_{1}_ali_paired1.fq -2 unaligned_{0}_{1}_ali_paired2.fq -0 /dev/null -s /dev/null -n
+	
 				## Output: 2 fastq files in each sample name dir (unaligned_{sample_name}_1_ali_paired1.fq)
 						
+
 
 	#2nd alignment - HISAT2 
 		#2nd Ali - Run slurm in 2nd_ali dir (Have to hard code where index is - In 1st ali dir - adjust name if needed)
 			sbatch 3.C_hisat2_2_ali.slurm
 			./3.C_hisat2_next_ali_v2.py -b 2 -c 3rd_ali_BT 
 		        	## Output: sam file with _ali_2 in a subdir in next ali dir (3rd_ali dir) - it makes the third ali dir and all sub dirs which contain sam files (Nematostella_genome_ali_2_{1}.sam)
-		        		
-		# run sam tools - make fastq files to be used in third ali (Run slurm in 3rd_ali dir) (started 9:30)
+
+	    
+		# run sam tools - make fastq files to be used in third ali (Run slurm in 3rd_ali dir) 
 			sbatch 3.B_samtools_processing.slurm
 			./3.B_samtools_processing.py -b 2
 				## Output: 2 fastq files in each sample name dir (unaligned_{sample_name}_2_ali_paired1.fq)     	
@@ -91,14 +107,31 @@ Use 1_fastqc.py to loop thru and run fastqc for each sample --> run in raw reads
 		#3rd Ali - Run slurm in 3rd_ali dir (Have to hard code where index is - In 1st ali dir - adjust name if needed)
 			sbatch 3.D_bowtie_ali_3.slurm
 			./3.D_bowtie_ali_initial.py -b 3 -c 4th_ali_BT
+
+      			The actual code run in script: 
+	 		bowtie2 -q -p 12 --very-sensitive-local -x ../Nematostella_genome -1 {sample_name}_paired1.fq -2 {sample_name}_paired2.fq -S Nematostella_genome_BT_ali_{0}_{1}.sam".format
+    
 				# Output: sam file with BT_ali_3 in a dir in next ali dir (4th_ali dir) - it makes the fourth ali dir and all sub dirs which contain sam files (Nematostella_genome_BT_ali_3_{1}.sam)
-			
+
+   
 		# run sam tools - make fastq files to be used in fourth ali (Run slurm in 4th_ali dir)	
 			sbatch 3.E_samtools_processing_BT.slurm
 			./3.E_samtools_processing_BT.py -b 3
 				## Output: 2 fastq files in each sample name dir (unaligned_{sample_name}_3_ali_paired1.fq)
 		
 	
-		
+	#4th alignment - bowtie (hopefully final alignment - if it is rename 5th_ali to final_sam_files)
+		#4th Ali - Run slurm in 4th_ali dir (Have to hard code where index is - In 1st ali dir - adjust name if needed)
+			sbatch 3.F_bowtie_4_ali.slurm
+			./3.F_bowtie_next_ali.py -b 4 -c 5th_ali
+				## Output: sam file with BT_ali_4 in a dir in next ali dir (5th_ali dir) - it makes the fifth ali dir and all sub dirs which contain sam files (Nematostella_genome_BT_ali_4_{1}.sam)
+    
+			####  if it is rename 5th_ali to final_unmapped_sam_files #### 
+							
+					
+		# run sam tools - make fastq files  (Run slurm in 5th_ali dir/ final_sam_files dir)	
+			sbatch 3.E_samtools_processing_BT.slurm
+			./3.E_samtools_processing_BT.py -b 4
+				## Output: 2 fastq files in each sample name dir (unaligned_{sample_name}_4_ali_paired1.fq)
 		
 	
