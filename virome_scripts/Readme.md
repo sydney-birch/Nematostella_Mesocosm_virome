@@ -183,6 +183,24 @@ Move Unmapped reads into RNA filtration main dir
 
  
  ## 6) Viral Taxonomy Analysis     
+To investigate the viral taxa found in our analysis, we ultimately used NCBI taxon kit. But we first had to identify protiens and find their taxon IDs so we used BLAST and BioEntrez.     
+
+
+A) Download the refseq viral database.    
+`wget https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz `     
+*This has 683,238 viral protiens*      
+
+
+B) Make blast databases for each of the 14 viral assemblies     
+`./0_blastdb.sh`     
+
+
+C) Run a tBLASTn using the RefSeq viral database against each of the 14 viral asssemblies.
+`./1_blast.sh viral.1.protein.faa`     
+
+
+D) 
+
 
 
 
