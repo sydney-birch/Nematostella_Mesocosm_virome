@@ -1,4 +1,4 @@
-# Nematostella Mesocosm Virome/Host Transcriptome Study - Overview
+# Nematostella Mesocosm 2022 Virome, Host Transcriptome, and 16s Study - Overview
 This repository contains the virome, host transcriptome, and 16s rRNA work for our 2022 Mesocosm study looking at how Nematostella from different locations interact with microbes and viruses from a foreign environment. 
 
 ### Study Info and Sample Structure: 
