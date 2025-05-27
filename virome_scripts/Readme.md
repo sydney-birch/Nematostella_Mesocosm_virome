@@ -153,7 +153,34 @@ Move Unmapped reads into RNA filtration main dir
 		`#Output: all unmapped fastqs will be moved to the RNA_filt unmapped_fastq_files dir`
 
   ## 4) rRNA Filtration of Viral/Microbial Reads
-  Ultimately, in the step we want to have presumably all viral reads, so we need to filter out any prokaryotic and eukaryotic reads.     
-  A) Download files to create your rRNA database
+  Ultimately, in the step we want to have presumably all viral reads, so we need to filter out any prokaryotic and eukaryotic reads.    
+
+  
+  A) Download files to create your rRNA database     
+  `./4.A_RNAdb_download_files.sh`    
+
+  
+  B) Concatenate all the downloads and run cd-hit to remove duplicate sequences.     
+  `sbatch 4.B_cat_cd-hit.slurm` this runs: `./4.B_cat_cd-hit.sh RNA_db rRNAdb`     
+
+  
+  C) Map reads to rRNA db using hisat2       
+  `sbatch 4.C_filtered_hisat2.slurm` this runs: `./4.C_filtered_hisat2.py -a filtered_unmapped_fastq_files -b rRNAdb_ed1.fa -c unmapped_fastq_files`     
+
+  
+  D) Use samtools to make fastq files of the reads that did *not* map to rRNA db - these are the primarily viral reads      
+  `sbatch 4.D_samtools_processing.slurm` this runs: `./4.D_samtools_processing.py -a filtered_unmapped_fastq_files`      
+
+  
+  E) As an additional filtration step, we also mapped the reads to the NCBI nr database with viruses removed     
+  `sbatch 4.E_nr_filtered_hisat2.slurm` this runs: `./4.E_nr_filtered_hisat2.py -a ncbi_nr_filtered_unmapped_fastq_files -b ncbi_nr_DB.fa -c filtered_unmapped_fastq_files`      
+
+  
+  F) Use samtools to make fastq files of the reads that did *not* map to nr database       
+  `sbatch 4.F_samtools_processing.slurm ` this runs: `./4.F_samtools_processing.py -a ncbi_nr_filtered_unmapped_fastq_files`     
+  
+  
+
+  
   
 	
