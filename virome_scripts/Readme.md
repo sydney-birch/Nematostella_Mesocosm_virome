@@ -180,6 +180,16 @@ Move Unmapped reads into RNA filtration main dir
   `sbatch 4.F_samtools_processing.slurm ` this runs: `./4.F_samtools_processing.py -a ncbi_nr_filtered_unmapped_fastq_files`     
   
   
+ ## 5) Make Viral Assemblies 
+
+ Here, we are going to collapse the replicates to make assemblies for each sample. So three replicates will go into the generation of each location/timepoint sample resulting in a total of 14 assemblies (i.e., 7 locations and 2 timepoints)
+
+ Use spades --rnaviral to generate the viral assemblies, an example line of code:     
+ ```spades.py --rnaviral --pe1-1 ../../4_RNA_filt/filtered_unmapped_fastq_files/filtered_unaligned_NH_T0-NS_B1_4_ali_paired1.fq.gz --pe2-1 ../../4_RNA_filt/filtered_unmapped_fastq_files/filtered_unaligned_NH_T0-NS_B2_4_ali_paired1.fq.gz --pe3-1 ../../4_RNA_filt/filtered_unmapped_fastq_files/filtered_unaligned_NH_T0-NS_B4_4_ali_paired1.fq.gz --pe1-2 ../../4_RNA_filt/filtered_unmapped_fastq_files/filtered_unaligned_NH_T0-NS_B1_4_ali_paired2.fq.gz --pe2-2 ../../4_RNA_filt/filtered_unmapped_fastq_files/filtered_unaligned_NH_T0-NS_B2_4_ali_paired2.fq.gz --pe3-2 ../../4_RNA_filt/filtered_unmapped_fastq_files/filtered_unaligned_NH_T0-NS_B4_4_ali_paired2.fq.gz -o NS_T0_output```     
+
+ All assembly code can be found in `5.A_spades_indiv_filtered_unmaapped.slurm`     
+
+ 
 
   
   
