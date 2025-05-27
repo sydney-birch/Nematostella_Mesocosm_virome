@@ -24,12 +24,12 @@ Virome:
 2) Align reads to rRNA database comprised of SILVA LSU & SSU, GTDB SSU, and Rfam --> unmapped reads presumably viral
 3) Assemble viral transcriptome using Spades rnaviral (created 14 assemblies, collapsing replicates)
 4) Analyze Function
-.... A) Run MetaCerberus on assemblies
-.... B) Get functional terms: KEGG, COG, VOG, PHROG
-.... C) Visualize in R 
+....A) Run MetaCerberus on assemblies
+....B) Get functional terms: KEGG, COG, VOG, PHROG
+....C) Visualize in R 
 5) Analyze Taxonomy
-.... A) BLAST transcriptomes to RefSeq Viruses
-.... B) Filter BLAST output (>= 70% identity)
-.... C) BioEntrez and NCBI Taxon Kit to get taxon IDs and lineage info
-.... D) visualize in R &  run diversity metrics 
+....A) BLAST transcriptomes to RefSeq Viruses
+....B) Filter BLAST output (>= 70% identity)
+....C) BioEntrez and NCBI Taxon Kit to get taxon IDs and lineage info
+....D) visualize in R &  run diversity metrics 
 
