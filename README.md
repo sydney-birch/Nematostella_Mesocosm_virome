@@ -39,7 +39,7 @@ Our Main study question is:
     - A) Use EdgeR to conduct pariwise comparisons (T0 vs T14)
     - B) Run MetaCerberus on DEGs
     - C) Get functional terms: KEG, FOAM
-    - D) Visualize in R 
+    - D) Visualize in R (Heatmaps of DEGs and Functional Terms)
 3) Analyze WGCNA
     - A) Run WGCNA in R
     - B) Run MetaCerberus on Modules from WGCNA
