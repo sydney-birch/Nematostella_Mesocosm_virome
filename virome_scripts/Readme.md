@@ -235,7 +235,7 @@ salmon quant -p 12 --seqBias --gcBias -i mapped_index -l A -1 {0}/{1}_paired1.fa
 
 2.A) Run edgeR script in R to get Differentially Expressed Genes between Timepoints (T0 vs T14) for each location - write out into text files 
 
-   script: edgeR_meso_2022_MAPPED_14_groups.R   
+    script: edgeR_meso_2022_MAPPED_14_groups.R   
 
 3.A) Input DEG lists back to the terminal and get header information for each DEG to be used with selectSeqs 
 
