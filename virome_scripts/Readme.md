@@ -291,8 +291,17 @@ metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/SC_T0vT
    Make heatmaps in R using: Nematostella_mapped_DEG_heatmaps.R   
  
  ### B) Host WGCNA (Weighted Gene Co-expression Network Analysis) 
+B.1) For the WGCNA - Run the WGCNA R script 
+    *For this you will need to access the Salmon Host data in the mapping directory on your computer. 
+	*You will also need to generate a text file called library_to_stages.txt that details which samples belong to what sample group.  
+	    *Your output will be boxplots of Module expression data and a heatmap of particular modules along with spreadsheets of module gene information. 
 
-
+B.2) Once you have exported a list of your genes from the modules of interest - Run metacerberus to get functional information: 
+    *Use excel to get the full header information with the UK transcriptome header excel file (use xlookup) 
+	*Then, in the terminal, run selectSeqs.pl to pull out the sequences for each header in each module you are interested in. 
+	*Once you have your fasta file(s), run metacerberus on those files. 
+	*Export, metacerberus data, and make figures with R
+	
  
   
 ## 9) 16s rRNA Analysis (QIIME2)   
