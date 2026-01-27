@@ -229,15 +229,15 @@ salmon quant -p 12 --seqBias --gcBias -i mapped_index -l A -1 {0}/{1}_paired1.fa
 ```
 
 ### A) Differential Gene Expression     
-1.A) copy over Salmon output files to computer for R analyses - place in a folder called: mapping
+A.1) copy over Salmon output files to computer for R analyses - place in a folder called: mapping
 
 `scp -r sbirch1@hpc.charlotte.edu:./../../scratch/sbirch1/Nematostella_transcriptomics/8_salmon/aligned_NH_T* ./`
 
-2.A) Run edgeR script in R to get Differentially Expressed Genes between Timepoints (T0 vs T14) for each location - write out into text files 
+A.2) Run edgeR script in R to get Differentially Expressed Genes between Timepoints (T0 vs T14) for each location - write out into text files 
 
     script: edgeR_meso_2022_MAPPED_14_groups.R   
 
-3.A) Input DEG lists back to the terminal and get header information for each DEG to be used with selectSeqs 
+A.3) Input DEG lists back to the terminal and get header information for each DEG to be used with selectSeqs 
 
 ```
 #first run this script to turn the edgeR input into a list of headers to retrieve: 
@@ -250,13 +250,13 @@ mv *-header_list ../mapped_selectseqs_header_lists/
 ./3_get_full_headers.sh uk_transcriptome.fa --> this will run: script 3.B_get_full_headers.py
 ```
 
-4.A) Run selectSeqs to extract the sequences for each DEG from the transcriptome using the full headers:
+A.4) Run selectSeqs to extract the sequences for each DEG from the transcriptome using the full headers:
 ```
 #Run select seq bash script: 
 ./run_selectseqs.sh --> this will run ./selectSeqs.pl
 ```
 
-5.A) Run DEGs on Metacerberus to get potential functional annotations 
+A.5) Run DEGs on Metacerberus to get potential functional annotations 
 ```
 #Field: 
 metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/FIELD_T0vT14_DEGs_edgeR_output.txt-header_list_full_header-seqs.fa --hmm KOFam_eukaryote --dir_out mapped_FIELD_T0vT14_DEGs
@@ -280,9 +280,9 @@ metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/NS_T0vT
 metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/SC_T0vT14_DEGs_edgeR_output.txt-header_list_full_header-seqs.fa --hmm KOFam_eukaryote --dir_out mapped_SC_T0_v_T14_DEGs
 ````
 
-6.A) copy output to computer - turn counts into spreadsheets and make figures in R using script: Metacerberus_stats_output.R
+A.6) copy output to computer - turn counts into spreadsheets and make figures in R using script: Metacerberus_stats_output.R
 
-7.A) Make DEG heatmaps 
+A.7) Make DEG heatmaps 
 ```
 #run script to turn list of DEGs into a string to import to R: 
 ./prep_for_R_string_deg.py
@@ -291,16 +291,25 @@ metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/SC_T0vT
    Make heatmaps in R using: Nematostella_mapped_DEG_heatmaps.R   
  
  ### B) Host WGCNA (Weighted Gene Co-expression Network Analysis) 
-B.1) For the WGCNA - Run the WGCNA R script 
+B.1) For the WGCNA - Run the WGCNA R script (8.B.1_WGCNA)
    * For this you will need to access the Salmon Host data in the mapping directory on your computer.  
    * You will also need to generate a text file called library_to_stages.txt that details which samples belong to what sample group.   
    * Your output will be boxplots of Module expression data and a heatmap of particular modules along with spreadsheets of module gene information.  
 
-B.2) Once you have exported a list of your genes from the modules of interest - Run metacerberus to get functional information:  
+B.2) Once you have exported a list of your genes from the modules of interest (I'm using top 5 most significant modules) - Run metacerberus to get functional information:  
    * Use excel to get the full header information with the UK transcriptome header excel file (use xlookup)  
-   * Then, in the terminal, run selectSeqs.pl to pull out the sequences for each header in each module you are interested in.  
-   * Once you have your fasta file(s), run metacerberus on those files.  
-   * Export, metacerberus data, and make figures with R  
+   * Then, in the terminal, run selectSeqs.pl to pull out the sequences for each header in each module you are interested in.
+     ```
+    ./selectSeqs.pl -f module_17_headers ./uk_transcriptome.fa >> module_17_seqs.fa
+	./selectSeqs.pl -f module_21_headers ./uk_transcriptome.fa >> module_21_seqs.fa
+	./selectSeqs.pl -f module_33_headers ./uk_transcriptome.fa >> module_33_seqs.fa
+	./selectSeqs.pl -f module_60_headers ./uk_transcriptome.fa >> module_60_seqs.fa
+	./selectSeqs.pl -f module_96_headers ./uk_transcriptome.fa >> module_96_seqs.fa
+	```
+   * Once you have your fasta file(s), run metacerberus on those files.
+     `Run Metacerberus slurm: sbatch 8.B.2_metacerb_MEs.slurm`
+   * Export, metacerberus data, and make figures with R - use 8.B.2_Metacerberus_ME_stats_output.R script
+     
 	
  
   
