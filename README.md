@@ -35,7 +35,7 @@ Our Main study question is:
   
 #### Host: 
 1) Use the mapped reads from Prep step 5 to align to the Nematostella genome using Salmon
-2) Aanalyze Differentially expressed Genes (DEGs)
+2) Analyze Differentially expressed Genes (DEGs)
     - A) Use EdgeR to conduct pariwise comparisons (T0 vs T14)
     - B) Run MetaCerberus on DEGs
     - C) Get functional terms: KEG, FOAM
