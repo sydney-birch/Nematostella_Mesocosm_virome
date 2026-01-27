@@ -231,8 +231,8 @@ G) Use BioEntrez to get taxids
 ./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/SC-T14_ref_blastout_70_pi_hits -o SC-T14 		#done Round 1 = 742, Round 2 = 489, Round 3 = 111  (total 1312/1342)
 ```
    * Concatenate files that need it - if needed to run on small chuncks:
-     ```
-     	#MA-T14 	
+   ```
+     #MA-T14 	
 		cat MA-T14_accid-taxid.txt >> MA-T14_TOTAL_accid-taxid.txt
 		cat MA-T14-2_accid-taxid.txt >> MA-T14_TOTAL_accid-taxid.txt #1039
 		
@@ -263,7 +263,7 @@ G) Use BioEntrez to get taxids
 		cat SC-T14_taxid.txt >> SC-T14_TOTAL_taxid.txt	
 		cat SC-T14-2_taxid.txt >> SC-T14_TOTAL_taxid.txt
 		cat SC-T14-3_taxid.txt >> SC-T14_TOTAL_taxid.txt #1342
-	```
+   ```
 
 H) Run Taxon Kit from NCBI to get viral taxonomic information using the viral taxid 
 
@@ -325,7 +325,16 @@ Now run R scripts to look at taxanomic overlaps and run diversity statistics: ge
 
 
  ## 7) Viral Functional Analysis       
+   * Run MetaCerberus on the 14 viral assemblies generated in step 5 (spades assemblies)   
 
+      * sbatch 7_metacerberus.slurm    
+      * example line: `metacerberus.py --prodigal ../5_assemblies/filtered_unmapped_assembly/NS-T0_assembly.fa --hmm All --dir_out updated_NS-T0_output`   
+
+   * Copy over output files to your computer   
+   * Generate spreadsheets to input into R for KEGG, VOG, PHROG, COG, FOAM (or whichever you are most interested in)
+        * Column A should have the term name, each column after should be a location/time point filled in the the corresponding counts
+        * Once you make this spreadsheet - transpose it and make a csv with three columns: Term Name (Function), Count, Location
+   * Run R script to analyze MetaCerberus data: Metacerberus_stats_output.R
 
  
 ## 8) Host (Nematostella) Analysis  
