@@ -371,19 +371,19 @@ A.3) Input DEG lists back to the terminal and get header information for each DE
 
 ```
 #first run this script to turn the edgeR input into a list of headers to retrieve: 
-./run_get_headers_from_edgeR.sh --> This runs run_get_headers_from_edgeR.py 
+./8.A.3_run_get_headers_from_edgeR.sh --> This runs 8.A.3_run_get_headers_from_edgeR.py 
 
 #Next, move all header lists into a new dir called mapped_selectseqs_header_lists: 
 mv *-header_list ../mapped_selectseqs_header_lists/
 
 #Now use script to get full headers from initial accession id to run with selectSeqs: 
-./3_get_full_headers.sh uk_transcriptome.fa --> this will run: script 3.B_get_full_headers.py
+./8.A.3b_get_full_headers.sh uk_transcriptome.fa --> this will run: script 8.A.3b_get_full_headers.py
 ```
 
 A.4) Run selectSeqs to extract the sequences for each DEG from the transcriptome using the full headers:
 ```
 #Run select seq bash script: 
-./run_selectseqs.sh --> this will run ./selectSeqs.pl
+./8.A.4_run_selectseqs.sh --> this will run ./selectSeqs.pl
 ```
 
 A.5) Run DEGs on Metacerberus to get potential functional annotations 
@@ -415,7 +415,7 @@ A.6) copy output to computer - turn counts into spreadsheets and make figures in
 A.7) Make DEG heatmaps 
 ```
 #run script to turn list of DEGs into a string to import to R: 
-./prep_for_R_string_deg.py
+./8.A.7_prep_for_R_string_deg.py
 ```
 
    Make heatmaps in R using: Nematostella_mapped_DEG_heatmaps.R   
