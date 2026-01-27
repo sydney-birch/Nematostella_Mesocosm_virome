@@ -666,11 +666,50 @@ qiime taxa barplot \
 #download visualizations
 ```
 
-Step 6: Differential abundance testing with ANCOM - run at specific taxonomic levels
+Step 6: Differential abundance testing with ANCOM - run at specific taxonomic levels - only showing species run here 
+
+```
+### Level 7 - Species 
+  Dont do feature table filter
+  
+qiime taxa collapse \
+  --i-table table.qza \
+  --i-taxonomy taxonomy_v2.qza \
+  --p-level 7 \
+  --o-collapsed-table level-7-table.qza
+  
+qiime composition ancombc \
+  --i-table level-7-table.qza \
+  --m-metadata-file metadata-file-2022_v2.tsv \
+  --p-formula 'loctime' \
+  --o-differentials 7-ancom-loc-time.qza  
+  
+qiime composition da-barplot \
+  --i-data 7-ancom-loc-time.qza  \
+  --p-significance-threshold 0.001 \
+  --p-level-delimiter ';' \
+  --o-visualization level-7-da-barplot-loc-time.qzv 
+  
+#download visualizations 
 
 
+#FIX COMPARISON: from FLT0 to FieldT0
+qiime composition ancombc \
+  --i-table level-7-table.qza \
+  --m-metadata-file metadata-file-2022_v2.tsv \
+  --p-formula 'loctime' \
+  --p-reference-levels loctime::Field-T0 \
+  --o-differentials 7-ancom-loc-time_fieldt0.qza  
+  
+qiime composition da-barplot \
+  --i-data 7-ancom-loc-time_fieldt0.qza  \
+  --p-significance-threshold 0.001 \
+  --p-level-delimiter ';' \
+  --o-visualization level-7-da-barplot-loc-time_fieldt0.qzv 
+  
+#download visualizations
+```
 
-
-
+Make Visualizations in R: qiime2_meso_2022.R
 
 
