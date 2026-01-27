@@ -196,7 +196,8 @@ B) Make blast databases for each of the 14 viral assemblies
 
 
 C) Run a tBLASTn using the RefSeq viral database against each of the 14 viral asssemblies.
-`./6.1_blast.sh viral.1.protein.faa`     
+`sbatch 6.1_blast.slurm`   
+This runs a blast search --> `tblastn -query viral.1.protein.faa -db ./blastdb/FIELD-T0_assembly.fa_FIX.fa -out FIELD-T0_ref_blastout -outfmt 6 -max_target_seqs 1 -evalue 1e-5 -num_threads 12 -best_hit_score_edge 0.25 -best_hit_overhang 0.1`        
 
 
 D) Decided to trim the blastout to 70 percent identity - more managable and more stringent:    
@@ -208,12 +209,13 @@ E) Get Accession IDs from the 70_pi_blastout table
 
 
 F) Get the full headers from the accession IDs to run with selectSeqs   
-`sbatch 6.3_get_full_headers.slurm`    
+`./6.3_get_full_headers.sh`   this runs --> 6.3.B_get_full_headers.py    
 
 G) Use BioEntrez to get taxids    
    * Key variables to adjust:
       * dbfrom="protein", id=nuccoreid , linkname="protein_taxonomy"
       * Generate an API key on NCBI in your account settings
+      * Run slurm  6.C_run_bioentrez.slurm in chunks if needed
 ```
 ./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/FIELD-T0_ref_blastout_70_pi_hits -o FIELD-T0 	#done Round 1 = 1103  (total 1103)
 ./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/FIELD-T14_ref_blastout_70_pi_hits -o FIELD-T14 	#done Round 1 = 559 (total 559)
