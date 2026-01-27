@@ -192,17 +192,136 @@ A) Download the refseq viral database.
 
 
 B) Make blast databases for each of the 14 viral assemblies     
-`./0_blastdb.sh`     
+`./6.0_blastdb.sh`     
 
 
 C) Run a tBLASTn using the RefSeq viral database against each of the 14 viral asssemblies.
-`./1_blast.sh viral.1.protein.faa`     
+`./6.1_blast.sh viral.1.protein.faa`     
 
 
-D) 
+D) Decided to trim the blastout to 70 percent identity - more managable and more stringent:    
+`./6.1.B_run_trim_blastout.sh`
 
 
+E) Get Accession IDs from the 70_pi_blastout table
+`./6.2_get_accessions.sh`
 
+
+F) Get the full headers from the accession IDs to run with selectSeqs   
+`sbatch 6.3_get_full_headers.slurm`    
+
+G) Use BioEntrez to get taxids    
+   * Key variables to adjust:
+      * dbfrom="protein", id=nuccoreid , linkname="protein_taxonomy"
+      * Generate an API key on NCBI in your account settings
+```
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/FIELD-T0_ref_blastout_70_pi_hits -o FIELD-T0 	#done Round 1 = 1103  (total 1103)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/FIELD-T14_ref_blastout_70_pi_hits -o FIELD-T14 	#done Round 1 = 559 (total 559)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/FL-T0_ref_blastout_70_pi_hits -o FL-T0 			#done Round 1 = 461 (total 461/456)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/FL-T14_ref_blastout_70_pi_hits -o FL-T14		#done Round 1 = 1077  (total 1057/1077)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/MA-T0_ref_blastout_70_pi_hits -o MA-T0 			#done round 1 = 475 (total 475)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/MA-T14_ref_blastout_70_pi_hits -o MA-T14 		#done Round 1 = 809, Round 2 = 230  (total 1024/1039)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/ME-T0_ref_blastout_70_pi_hits -o ME-T0 			#done Round 1 = 654 (total 536/654)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/ME-T14_ref_blastout_70_pi_hits -o ME-T14 		#done Round 1 = 811 (total 784/811)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/NH-T0_ref_blastout_70_pi_hits -o NH-T0 			#done Round 1 = 744 (total 684/744)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/NH-T14_ref_blastout_70_pi_hits -o NH-T14 		#done Round 1 = 925 (total 884/925)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/NS-T0_ref_blastout_70_pi_hits -o NS-T0 			#done Round 1 = 155, Round 2 = 125, Round 3 = 100 (total 380)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/NS-T14_ref_blastout_70_pi_hits -o NS-T14 		#done Round 1 = 1112  (total 1051/1112)
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/SC-T0_ref_blastout_70_pi_hits -o SC-T0 			#done Round 1 = 254, Round 2 = 61 (total 315) 
+./6.B_get_taxid-prot.py -i ../70_pi_hit1_accessions/SC-T14_ref_blastout_70_pi_hits -o SC-T14 		#done Round 1 = 742, Round 2 = 489, Round 3 = 111  (total 1312/1342)
+```
+   * Concatenate files that need it - if needed to run on small chuncks:
+     ```
+     	#MA-T14 	
+		cat MA-T14_accid-taxid.txt >> MA-T14_TOTAL_accid-taxid.txt
+		cat MA-T14-2_accid-taxid.txt >> MA-T14_TOTAL_accid-taxid.txt #1039
+		
+		cat MA-T14_taxid.txt >> MA-T14_TOTAL_taxid.txt	
+		cat MA-T14-2_taxid.txt >> MA-T14_TOTAL_taxid.txt #1039
+		
+	#NS-T0
+		cat NS-T0_accid-taxid.txt >> NS-T0_TOTAL_accid-taxid.txt
+		cat NS-T0-2_accid-taxid.txt >> NS-T0_TOTAL_accid-taxid.txt
+		cat NS-T0-3_accid-taxid.txt >> NS-T0_TOTAL_accid-taxid.txt #380
+		
+		cat NS-T0_taxid.txt >> NS-T0_TOTAL_taxid.txt	
+		cat NS-T0-2_taxid.txt >> NS-T0_TOTAL_taxid.txt
+		cat NS-T0-3_taxid.txt >> NS-T0_TOTAL_taxid.txt #380
+	
+	#SC-T0
+		cat SC-T0_accid-taxid.txt >> SC-T0_TOTAL_accid-taxid.txt
+		cat SC-T0-2_accid-taxid.txt >> SC-T0_TOTAL_accid-taxid.txt #315
+		
+		cat SC-T0_taxid.txt >> SC-T0_TOTAL_taxid.txt	
+		cat SC-T0-2_taxid.txt >> SC-T0_TOTAL_taxid.txt #315
+			
+	#SC-T14
+		cat SC-T14_accid-taxid.txt >> SC-T14_TOTAL_accid-taxid.txt
+		cat SC-T14-2_accid-taxid.txt  >> SC-T14_TOTAL_accid-taxid.txt
+		cat SC-T14-3_accid-taxid.txt  >> SC-T14_TOTAL_accid-taxid.txt #1342
+		
+		cat SC-T14_taxid.txt >> SC-T14_TOTAL_taxid.txt	
+		cat SC-T14-2_taxid.txt >> SC-T14_TOTAL_taxid.txt
+		cat SC-T14-3_taxid.txt >> SC-T14_TOTAL_taxid.txt #1342
+	```
+
+H) Run Taxon Kit from NCBI to get viral taxonomic information using the viral taxid 
+
+```
+cat final_taxids/FIELD-T0_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> FIELD-T0_linage.txt
+
+cat final_taxids/FIELD-T14_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> FIELD-T14_linage.txt
+    
+cat final_taxids/FL-T0_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> FL-T0_linage.txt
+
+cat final_taxids/FL-T14_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> FL-T14_linage.txt
+
+cat final_taxids/MA-T0_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> MA-T0_linage.txt		
+
+cat final_taxids/MA-T14_TOTAL_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> MA-T14_linage.txt
+
+cat final_taxids/ME-T0_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> ME-T0_linage.txt
+    
+cat final_taxids/ME-T14_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> ME-T14_linage.txt
+
+cat final_taxids/NH-T0_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> NH-T0_linage.txt		
+
+cat final_taxids/NH-T14_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> NH-T14_linage.txt
+
+cat final_taxids/NS-T0_TOTAL_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> NS-T0_linage.txt
+    
+cat final_taxids/NS-T14_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> NS-T14_linage.txt		
+
+cat final_taxids/SC-T0_TOTAL_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> SC-T0_linage.txt
+
+cat final_taxids/SC-T14_TOTAL_taxid.txt \
+    | ./taxonkit reformat --data-dir TAXONKIT_DB -I 1 -F -P -f "{k}\t{p}\t{c}\t{o}\t{f}\t{g}\t{s}\t{t}" >> SC-T14_linage.txt
+```
+
+I) Analyze Taxonomy data in R 
+   * First you'll need to process the data in excel - make a total_Lineage file - import each lineage file and adjust data to columns
+   	    * Each tab in this file is a location
+   * Additionally, make a spreadsheet called genus.csv and copy each location into a column in this sheet - this will be used as the input in R script
+   * Make a third spreadsheet of the genetic composition of the viruses present using the VMR spreadsheet using xlookup
+        * Run two xlookups - one using the species column, the other using virus name column to conduct your search
+        * Then run an if statement to merge the data: `=IF(V2=0,W2,V2)` where V2 = species col and W2 = virus name col
+        * remove s__ by find and replace
+
+
+Now run R scripts to look at taxanomic overlaps and run diversity statistics: genus_work.R
 
 
  ## 7) Viral Functional Analysis       
