@@ -87,7 +87,7 @@ A.8) Use the Host data to make a heatmap of expression of the Nematostella 56 Im
     8.A.8_Host_Immune_gene_set_heatmaps.R
  
  ### B) Host WGCNA (Weighted Gene Co-expression Network Analysis) 
-B.1) For the WGCNA - Run the WGCNA R script (8.B.1_WGCNA)
+B.1) For the WGCNA - Run the WGCNA R script (8.B.1_Host_WGCNA-timepoint.R and 8.B.1_Host_WGCNA-north_vs_south.R)
    * For this you will need to access the Salmon Host data in the mapping directory on your computer.  
    * You will also need to generate a text file called library_to_stages.txt that details which samples belong to what sample group.   
    * Your output will be boxplots of Module expression data and a heatmap of particular modules along with spreadsheets of module gene information.  
@@ -104,5 +104,5 @@ B.2) Once you have exported a list of your genes from the modules of interest (I
 	```
    * Once you have your fasta file(s), run metacerberus on those files.
      `Run Metacerberus slurm: sbatch 8.B.2_metacerb_MEs.slurm`
-   * Export, metacerberus data, and make figures with R - use 8.B.2_Metacerberus_ME_stats_output.R script
+   * Export, metacerberus data, and make figures with R - use 8.B.2_Metacerberus_WGCNA_module_work.R script
      
