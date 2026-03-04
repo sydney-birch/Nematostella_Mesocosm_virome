@@ -5,7 +5,7 @@ We are picking up on Step 8 of the overall analysis to analyze the host transcri
 ## 8) Host (Nematostella) Analysis  
 ### Prep) Use Salmon to align reads and get counts
 
-First, align the mapped (Nematostella) reads to the UK transcriptome to get counts and sequence IDs for the reads. The Host reads were identified in 
+First, align the mapped (Nematostella) reads to the UK transcriptome to get counts and sequence IDs for the reads. The Host reads were identified in Step 3.B of the virome analysis (reads that mapped to the Nematostella transcriptome). 
 
    A) Copy over transcriptome: GCF_932526225.1/rna.fna (I renamed to uk_transcriptome.fa)
 
