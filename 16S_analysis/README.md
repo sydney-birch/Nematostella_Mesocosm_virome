@@ -273,6 +273,5 @@ qiime composition da-barplot \
 #download visualizations
 ```
 
-Make Visualizations in R: qiime2_meso_2022.R
-
+Make Visualizations in R: 9_QIIME2_visualizations.R
 
