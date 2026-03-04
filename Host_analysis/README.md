@@ -28,7 +28,7 @@ A.1) copy over Salmon output files to computer for R analyses - place in a folde
 
 A.2) Run edgeR script in R to get Differentially Expressed Genes between Timepoints (T0 vs T14) for each location - write out into text files 
 
-    script: edgeR_meso_2022_MAPPED_14_groups.R   
+    script: 8.A.2_edgeR_Host.R   
 
 A.3) Input DEG lists back to the terminal and get header information for each DEG to be used with selectSeqs 
 
@@ -73,7 +73,7 @@ metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/NS_T0vT
 metacerberus.py --fraggenescan ../8_salmon/mapped_selectseqs_fasta_files/SC_T0vT14_DEGs_edgeR_output.txt-header_list_full_header-seqs.fa --hmm KOFam_eukaryote --dir_out mapped_SC_T0_v_T14_DEGs
 ````
 
-A.6) copy output to computer - turn counts into spreadsheets and make figures in R using script: Metacerberus_stats_output.R
+A.6) copy output to computer - turn counts into spreadsheets and make figures in R using script: 8.A.6_Metacerberus_Host_DEGs.R
 
 A.7) Make DEG heatmaps 
 ```
@@ -81,7 +81,10 @@ A.7) Make DEG heatmaps
 ./8.A.7_prep_for_R_string_deg.py
 ```
 
-   Make heatmaps in R using: Nematostella_mapped_DEG_heatmaps.R   
+   Make heatmaps in R using: 8.A.7_Host_DEG_Heatmaps.R    
+   
+A.8) Use the Host data to make a heatmap of expression of the Nematostella 56 Immune gene set:   
+    8.A.8_Host_Immune_gene_set_heatmaps.R
  
  ### B) Host WGCNA (Weighted Gene Co-expression Network Analysis) 
 B.1) For the WGCNA - Run the WGCNA R script (8.B.1_WGCNA)
