@@ -323,7 +323,7 @@ I) Analyze Taxonomy data in R
         * remove s__ by find and replace
 
 
-Now run R scripts to look at taxanomic overlaps and run diversity statistics: genus_work.R
+Now run R scripts to look at taxanomic overlaps and run diversity statistics: 6_Meso_22_taxonomy_work.R
 
 
  ## 7) Viral Functional Analysis       
@@ -336,6 +336,6 @@ Now run R scripts to look at taxanomic overlaps and run diversity statistics: ge
    * Generate spreadsheets to input into R for KEGG, VOG, PHROG, COG, FOAM (or whichever you are most interested in)
         * Column A should have the term name, each column after should be a location/time point filled in the the corresponding counts
         * Once you make this spreadsheet - transpose it and make a csv with three columns: Term Name (Function), Count, Location
-   * Run R script to analyze MetaCerberus data: Metacerberus_stats_output.R
+   * Run R script to analyze MetaCerberus data: 7_Meso_22_Metacerberus_work.R
 
  
