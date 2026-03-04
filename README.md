@@ -17,7 +17,7 @@ Our Main study question is:
 4) Hypervariable regions V1-V2 of bacterial 16S rRNA genes were amplified with the extracted DNA from Step 1
 5) We sequenced 16S samples using NextSeq
  
-#### Virome:
+#### [Virome](https://github.com/sydney-birch/Nematostella_Mesocosm_virome/tree/main/virome_scripts):
 1) Prep work: Run Fastqc, trim reads, and run fastqc again
 2) Map reads to the genome to get two pots of data --> mapped (Nematostella reads) and unmapped (virome/microbe reads)    
 3) Map the unmapped reads back to the genome until 0 reads align
@@ -33,20 +33,21 @@ Our Main study question is:
    - C) BioEntrez and NCBI Taxon Kit to get taxon IDs and lineage info    
    - D) visualize in R &  run diversity metrics
   
-#### Host: 
+#### [Host](https://github.com/sydney-birch/Nematostella_Mesocosm_virome/tree/main/Host_analysis): 
 1) Use the mapped reads from Prep step 5 to align to the Nematostella genome using Salmon
 2) Analyze Differentially expressed Genes (DEGs)
     - A) Use EdgeR to conduct pariwise comparisons (T0 vs T14)
     - B) Run MetaCerberus on DEGs
     - C) Get functional terms: KEG, FOAM
     - D) Visualize in R (Heatmaps of DEGs and Functional Terms)
+    - E) Examine Host expression of Nematostella 56 Immune gene set
 3) Analyze WGCNA
     - A) Run WGCNA in R
     - B) Run MetaCerberus on Modules from WGCNA
     - C) Get functional terms: KEGG, FOAM
     - D) Visualize in R
   
-#### Microbe (16s QIMME2 Analysis): 
+#### Microbe ([16s QIMME2 Analysis](https://github.com/sydney-birch/Nematostella_Mesocosm_virome/tree/main/16S_analysis)): 
 1) Import reads into QIIME2
 2) Sequence quality control and feature table construction using DADA2 plugin
 3) Generate a tree for phylogenetic diversity analysis
