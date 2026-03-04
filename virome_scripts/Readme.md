@@ -1,4 +1,4 @@
-#  Workflow for Nematostella mesocosom analysis
+#  Workflow for virome analysis
 
 ## Prep work: 
 A) Transfer over all data and adjust names by running the change_raw_fq_file_names.py with name_change.txt --> has the conversion of names from admera (we sequenced 8 samples at UNCC intially - all other samples were sent to admera for sequencing)    
