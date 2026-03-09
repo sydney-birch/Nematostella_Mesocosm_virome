@@ -2,6 +2,10 @@
 
 This is picking up after the host transcriptome analysis. 
 
+We have a total of 70 samples (7 locations, 2 timepoints, 5 reps each)
+  - Locations: Field (NH) ; NS ; ME ; NH ; MA ; SC ; FL
+  - Time points: T0 and T14 
+
 ## 9) 16s rRNA Analysis (QIIME2)   
    * For the QIIME2 analysis - I'm following the Moving Pictures tutorial (https://docs.qiime2.org/2020.6/tutorials/moving-pictures/) and the Atacama soil tutorial (https://docs.qiime2.org/2024.10/tutorials/atacama-soils/)
 
