@@ -1,0 +1,197 @@
+﻿Location,Counts,Function
+NH_T0,22,Drug resistance: antimicrobial
+NH_T14,32,Drug resistance: antimicrobial
+NS_T0,31,Drug resistance: antimicrobial
+NS_T14,25,Drug resistance: antimicrobial
+ME_T0,13,Drug resistance: antimicrobial
+ME_T14,33,Drug resistance: antimicrobial
+MA_T0,12,Drug resistance: antimicrobial
+MA_T14,37,Drug resistance: antimicrobial
+FL_T0,11,Drug resistance: antimicrobial
+FL_T14,17,Drug resistance: antimicrobial
+FIELD_T0,41,Drug resistance: antimicrobial
+FIELD_T14,33,Drug resistance: antimicrobial
+SC_T0,25,Drug resistance: antimicrobial
+SC_T14,49,Drug resistance: antimicrobial
+NH_T0,47,Environmental adaptation
+NH_T14,119,Environmental adaptation
+NS_T0,50,Environmental adaptation
+NS_T14,83,Environmental adaptation
+ME_T0,48,Environmental adaptation
+ME_T14,97,Environmental adaptation
+MA_T0,39,Environmental adaptation
+MA_T14,95,Environmental adaptation
+FL_T0,41,Environmental adaptation
+FL_T14,78,Environmental adaptation
+FIELD_T0,162,Environmental adaptation
+FIELD_T14,195,Environmental adaptation
+SC_T0,46,Environmental adaptation
+SC_T14,117,Environmental adaptation
+NH_T0,9,Immune disease
+NH_T14,20,Immune disease
+NS_T0,7,Immune disease
+NS_T14,21,Immune disease
+ME_T0,6,Immune disease
+ME_T14,24,Immune disease
+MA_T0,7,Immune disease
+MA_T14,25,Immune disease
+FL_T0,12,Immune disease
+FL_T14,19,Immune disease
+FIELD_T0,27,Immune disease
+FIELD_T14,32,Immune disease
+SC_T0,11,Immune disease
+SC_T14,32,Immune disease
+NH_T0,69,Immune system
+NH_T14,209,Immune system
+NS_T0,42,Immune system
+NS_T14,211,Immune system
+ME_T0,55,Immune system
+ME_T14,270,Immune system
+MA_T0,71,Immune system
+MA_T14,189,Immune system
+FL_T0,71,Immune system
+FL_T14,156,Immune system
+FIELD_T0,328,Immune system
+FIELD_T14,393,Immune system
+SC_T0,90,Immune system
+SC_T14,314,Immune system
+NH_T0,85,Infectious disease: bacterial
+NH_T14,273,Infectious disease: bacterial
+NS_T0,63,Infectious disease: bacterial
+NS_T14,230,Infectious disease: bacterial
+ME_T0,80,Infectious disease: bacterial
+ME_T14,268,Infectious disease: bacterial
+MA_T0,83,Infectious disease: bacterial
+MA_T14,260,Infectious disease: bacterial
+FL_T0,81,Infectious disease: bacterial
+FL_T14,187,Infectious disease: bacterial
+FIELD_T0,342,Infectious disease: bacterial
+FIELD_T14,392,Infectious disease: bacterial
+SC_T0,107,Infectious disease: bacterial
+SC_T14,337,Infectious disease: bacterial
+NH_T0,19,Infectious disease: parasitic
+NH_T14,53,Infectious disease: parasitic
+NS_T0,11,Infectious disease: parasitic
+NS_T14,48,Infectious disease: parasitic
+ME_T0,12,Infectious disease: parasitic
+ME_T14,63,Infectious disease: parasitic
+MA_T0,15,Infectious disease: parasitic
+MA_T14,47,Infectious disease: parasitic
+FL_T0,15,Infectious disease: parasitic
+FL_T14,46,Infectious disease: parasitic
+FIELD_T0,81,Infectious disease: parasitic
+FIELD_T14,95,Infectious disease: parasitic
+SC_T0,24,Infectious disease: parasitic
+SC_T14,86,Infectious disease: parasitic
+NH_T0,148,Infectious disease: viral
+NH_T14,342,Infectious disease: viral
+NS_T0,70,Infectious disease: viral
+NS_T14,308,Infectious disease: viral
+ME_T0,99,Infectious disease: viral
+ME_T14,396,Infectious disease: viral
+MA_T0,99,Infectious disease: viral
+MA_T14,303,Infectious disease: viral
+FL_T0,105,Infectious disease: viral
+FL_T14,257,Infectious disease: viral
+FIELD_T0,495,Infectious disease: viral
+FIELD_T14,560,Infectious disease: viral
+SC_T0,138,Infectious disease: viral
+SC_T14,438,Infectious disease: viral
+NH_T0,2,Information processing in viruses
+NH_T14,1,Information processing in viruses
+NS_T0,0,Information processing in viruses
+NS_T14,0,Information processing in viruses
+ME_T0,0,Information processing in viruses
+ME_T14,0,Information processing in viruses
+MA_T0,1,Information processing in viruses
+MA_T14,1,Information processing in viruses
+FL_T0,2,Information processing in viruses
+FL_T14,1,Information processing in viruses
+FIELD_T0,2,Information processing in viruses
+FIELD_T14,3,Information processing in viruses
+SC_T0,1,Information processing in viruses
+SC_T14,0,Information processing in viruses
+NH_T0,7,Viral protein families
+NH_T14,11,Viral protein families
+NS_T0,3,Viral protein families
+NS_T14,9,Viral protein families
+ME_T0,4,Viral protein families
+ME_T14,11,Viral protein families
+MA_T0,5,Viral protein families
+MA_T14,23,Viral protein families
+FL_T0,6,Viral protein families
+FL_T14,14,Viral protein families
+FIELD_T0,7,Viral protein families
+FIELD_T14,7,Viral protein families
+SC_T0,5,Viral protein families
+SC_T14,21,Viral protein families
+NH_T0,30,Cellular community - eukaryotes
+NH_T14,89,Cellular community - eukaryotes
+NS_T0,18,Cellular community - eukaryotes
+NS_T14,87,Cellular community - eukaryotes
+ME_T0,20,Cellular community - eukaryotes
+ME_T14,100,Cellular community - eukaryotes
+MA_T0,27,Cellular community - eukaryotes
+MA_T14,76,Cellular community - eukaryotes
+FL_T0,22,Cellular community - eukaryotes
+FL_T14,67,Cellular community - eukaryotes
+FIELD_T0,155,Cellular community - eukaryotes
+FIELD_T14,208,Cellular community - eukaryotes
+SC_T0,33,Cellular community - eukaryotes
+SC_T14,117,Cellular community - eukaryotes
+NH_T0,69,Cellular community - prokaryotes
+NH_T14,113,Cellular community - prokaryotes
+NS_T0,123,Cellular community - prokaryotes
+NS_T14,98,Cellular community - prokaryotes
+ME_T0,49,Cellular community - prokaryotes
+ME_T14,116,Cellular community - prokaryotes
+MA_T0,42,Cellular community - prokaryotes
+MA_T14,125,Cellular community - prokaryotes
+FL_T0,49,Cellular community - prokaryotes
+FL_T14,93,Cellular community - prokaryotes
+FIELD_T0,151,Cellular community - prokaryotes
+FIELD_T14,101,Cellular community - prokaryotes
+SC_T0,78,Cellular community - prokaryotes
+SC_T14,174,Cellular community - prokaryotes
+NH_T0,774,Protein families: genetic information processing
+NH_T14,1680,Protein families: genetic information processing
+NS_T0,780,Protein families: genetic information processing
+NS_T14,1296,Protein families: genetic information processing
+ME_T0,645,Protein families: genetic information processing
+ME_T14,1629,Protein families: genetic information processing
+MA_T0,539,Protein families: genetic information processing
+MA_T14,1465,Protein families: genetic information processing
+FL_T0,573,Protein families: genetic information processing
+FL_T14,1188,Protein families: genetic information processing
+FIELD_T0,2298,Protein families: genetic information processing
+FIELD_T14,2751,Protein families: genetic information processing
+SC_T0,741,Protein families: genetic information processing
+SC_T14,2081,Protein families: genetic information processing
+NH_T0,268,Protein families: metabolism
+NH_T14,634,Protein families: metabolism
+NS_T0,332,Protein families: metabolism
+NS_T14,486,Protein families: metabolism
+ME_T0,189,Protein families: metabolism
+ME_T14,604,Protein families: metabolism
+MA_T0,177,Protein families: metabolism
+MA_T14,597,Protein families: metabolism
+FL_T0,177,Protein families: metabolism
+FL_T14,436,Protein families: metabolism
+FIELD_T0,681,Protein families: metabolism
+FIELD_T14,757,Protein families: metabolism
+SC_T0,306,Protein families: metabolism
+SC_T14,897,Protein families: metabolism
+NH_T0,525,Protein families: signaling and cellular processes
+NH_T14,1077,Protein families: signaling and cellular processes
+NS_T0,748,Protein families: signaling and cellular processes
+NS_T14,885,Protein families: signaling and cellular processes
+ME_T0,438,Protein families: signaling and cellular processes
+ME_T14,1056,Protein families: signaling and cellular processes
+MA_T0,359,Protein families: signaling and cellular processes
+MA_T14,998,Protein families: signaling and cellular processes
+FL_T0,405,Protein families: signaling and cellular processes
+FL_T14,756,Protein families: signaling and cellular processes
+FIELD_T0,1425,Protein families: signaling and cellular processes
+FIELD_T14,1394,Protein families: signaling and cellular processes
+SC_T0,613,Protein families: signaling and cellular processes
+SC_T14,1476,Protein families: signaling and cellular processes

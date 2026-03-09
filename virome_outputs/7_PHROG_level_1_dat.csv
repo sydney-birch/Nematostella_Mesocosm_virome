@@ -1,0 +1,141 @@
+﻿Location,Counts,Function
+NS_T0,7,connector
+NS_T14,20,connector
+ME_T0,6,connector
+ME_T14,14,connector
+NH_T0,19,connector
+NH_T14,22,connector
+FIELD_T0,12,connector
+FIELD_T14,5,connector
+MA_T0,6,connector
+MA_T14,32,connector
+FL_T0,12,connector
+FL_T14,28,connector
+SC_T0,5,connector
+SC_T14,33,connector
+NS_T0,109,"DNA, RNA and nucleotide metabolism"
+NS_T14,250,"DNA, RNA and nucleotide metabolism"
+ME_T0,73,"DNA, RNA and nucleotide metabolism"
+ME_T14,162,"DNA, RNA and nucleotide metabolism"
+NH_T0,200,"DNA, RNA and nucleotide metabolism"
+NH_T14,221,"DNA, RNA and nucleotide metabolism"
+FIELD_T0,121,"DNA, RNA and nucleotide metabolism"
+FIELD_T14,93,"DNA, RNA and nucleotide metabolism"
+MA_T0,98,"DNA, RNA and nucleotide metabolism"
+MA_T14,302,"DNA, RNA and nucleotide metabolism"
+FL_T0,103,"DNA, RNA and nucleotide metabolism"
+FL_T14,244,"DNA, RNA and nucleotide metabolism"
+SC_T0,94,"DNA, RNA and nucleotide metabolism"
+SC_T14,319,"DNA, RNA and nucleotide metabolism"
+NS_T0,53,head and packaging
+NS_T14,151,head and packaging
+ME_T0,43,head and packaging
+ME_T14,97,head and packaging
+NH_T0,120,head and packaging
+NH_T14,125,head and packaging
+FIELD_T0,69,head and packaging
+FIELD_T14,35,head and packaging
+MA_T0,52,head and packaging
+MA_T14,195,head and packaging
+FL_T0,65,head and packaging
+FL_T14,164,head and packaging
+SC_T0,54,head and packaging
+SC_T14,194,head and packaging
+NS_T0,16,integration and excision
+NS_T14,22,integration and excision
+ME_T0,8,integration and excision
+ME_T14,14,integration and excision
+NH_T0,17,integration and excision
+NH_T14,17,integration and excision
+FIELD_T0,16,integration and excision
+FIELD_T14,22,integration and excision
+MA_T0,10,integration and excision
+MA_T14,27,integration and excision
+FL_T0,14,integration and excision
+FL_T14,20,integration and excision
+SC_T0,18,integration and excision
+SC_T14,31,integration and excision
+NS_T0,11,lysis
+NS_T14,39,lysis
+ME_T0,11,lysis
+ME_T14,28,lysis
+NH_T0,31,lysis
+NH_T14,34,lysis
+FIELD_T0,17,lysis
+FIELD_T14,12,lysis
+MA_T0,11,lysis
+MA_T14,51,lysis
+FL_T0,16,lysis
+FL_T14,45,lysis
+SC_T0,13,lysis
+SC_T14,64,lysis
+NS_T0,42,"moron, auxiliary metabolic gene and host takeover"
+NS_T14,45,"moron, auxiliary metabolic gene and host takeover"
+ME_T0,21,"moron, auxiliary metabolic gene and host takeover"
+ME_T14,45,"moron, auxiliary metabolic gene and host takeover"
+NH_T0,36,"moron, auxiliary metabolic gene and host takeover"
+NH_T14,56,"moron, auxiliary metabolic gene and host takeover"
+FIELD_T0,46,"moron, auxiliary metabolic gene and host takeover"
+FIELD_T14,41,"moron, auxiliary metabolic gene and host takeover"
+MA_T0,15,"moron, auxiliary metabolic gene and host takeover"
+MA_T14,68,"moron, auxiliary metabolic gene and host takeover"
+FL_T0,18,"moron, auxiliary metabolic gene and host takeover"
+FL_T14,52,"moron, auxiliary metabolic gene and host takeover"
+SC_T0,25,"moron, auxiliary metabolic gene and host takeover"
+SC_T14,81,"moron, auxiliary metabolic gene and host takeover"
+NS_T0,85,other
+NS_T14,129,other
+ME_T0,54,other
+ME_T14,102,other
+NH_T0,94,other
+NH_T14,127,other
+FIELD_T0,98,other
+FIELD_T14,82,other
+MA_T0,53,other
+MA_T14,164,other
+FL_T0,59,other
+FL_T14,135,other
+SC_T0,75,other
+SC_T14,187,other
+NS_T0,41,tail
+NS_T14,158,tail
+ME_T0,31,tail
+ME_T14,62,tail
+NH_T0,110,tail
+NH_T14,127,tail
+FIELD_T0,44,tail
+FIELD_T14,37,tail
+MA_T0,38,tail
+MA_T14,223,tail
+FL_T0,58,tail
+FL_T14,152,tail
+SC_T0,43,tail
+SC_T14,218,tail
+NS_T0,20,transcription regulation
+NS_T14,34,transcription regulation
+ME_T0,10,transcription regulation
+ME_T14,16,transcription regulation
+NH_T0,25,transcription regulation
+NH_T14,24,transcription regulation
+FIELD_T0,21,transcription regulation
+FIELD_T14,13,transcription regulation
+MA_T0,12,transcription regulation
+MA_T14,41,transcription regulation
+FL_T0,10,transcription regulation
+FL_T14,33,transcription regulation
+SC_T0,15,transcription regulation
+SC_T14,56,transcription regulation
+NS_T0,0,unknown function
+NS_T14,4,unknown function
+ME_T0,1,unknown function
+ME_T14,1,unknown function
+NH_T0,2,unknown function
+NH_T14,3,unknown function
+FIELD_T0,1,unknown function
+FIELD_T14,0,unknown function
+MA_T0,2,unknown function
+MA_T14,5,unknown function
+FL_T0,2,unknown function
+FL_T14,3,unknown function
+SC_T0,1,unknown function
+SC_T14,4,unknown function

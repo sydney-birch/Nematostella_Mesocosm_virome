@@ -1,0 +1,211 @@
+﻿Location,Counts,Function
+NH_T0,553,Function unknown
+NH_T14,749,Function unknown
+NS_T0,259,Function unknown
+NS_T14,811,Function unknown
+ME_T0,212,Function unknown
+ME_T14,550,Function unknown
+MA_T0,206,Function unknown
+MA_T14,1231,Function unknown
+FL_T0,299,Function unknown
+FL_T14,870,Function unknown
+FIELD_T0,369,Function unknown
+FIELD_T14,288,Function unknown
+NH_T0,140,Virus protein with function beneficial for the host
+NH_T14,241,Virus protein with function beneficial for the host
+NS_T0,169,Virus protein with function beneficial for the host
+NS_T14,215,Virus protein with function beneficial for the host
+ME_T0,111,Virus protein with function beneficial for the host
+ME_T14,221,Virus protein with function beneficial for the host
+MA_T0,109,Virus protein with function beneficial for the host
+MA_T14,240,Virus protein with function beneficial for the host
+FL_T0,112,Virus protein with function beneficial for the host
+FL_T14,195,Virus protein with function beneficial for the host
+FIELD_T0,218,Virus protein with function beneficial for the host
+FIELD_T14,210,Virus protein with function beneficial for the host
+NH_T0,18,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+NH_T14,25,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+NS_T0,11,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+NS_T14,25,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+ME_T0,12,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+ME_T14,20,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+MA_T0,9,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+MA_T14,35,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+FL_T0,9,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+FL_T14,27,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+FIELD_T0,19,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+FIELD_T14,15,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+NH_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+NH_T14,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+NS_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+NS_T14,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+ME_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+ME_T14,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+MA_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+MA_T14,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+FL_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+FL_T14,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+FIELD_T0,0,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+FIELD_T14,0,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+NH_T0,7,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NH_T14,9,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NS_T0,3,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NS_T14,10,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+ME_T0,5,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+ME_T14,7,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+MA_T0,5,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+MA_T14,17,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FL_T0,6,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FL_T14,9,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FIELD_T0,9,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FIELD_T14,6,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NH_T0,4,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+NH_T14,7,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+NS_T0,3,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+NS_T14,8,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+ME_T0,2,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+ME_T14,5,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+MA_T0,3,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+MA_T14,10,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+FL_T0,3,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+FL_T14,7,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+FIELD_T0,8,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+FIELD_T14,5,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+NH_T0,48,Virus protein with function beneficial for the host | Virus replication
+NH_T14,66,Virus protein with function beneficial for the host | Virus replication
+NS_T0,38,Virus protein with function beneficial for the host | Virus replication
+NS_T14,53,Virus protein with function beneficial for the host | Virus replication
+ME_T0,33,Virus protein with function beneficial for the host | Virus replication
+ME_T14,63,Virus protein with function beneficial for the host | Virus replication
+MA_T0,27,Virus protein with function beneficial for the host | Virus replication
+MA_T14,64,Virus protein with function beneficial for the host | Virus replication
+FL_T0,38,Virus protein with function beneficial for the host | Virus replication
+FL_T14,58,Virus protein with function beneficial for the host | Virus replication
+FIELD_T0,56,Virus protein with function beneficial for the host | Virus replication
+FIELD_T14,52,Virus protein with function beneficial for the host | Virus replication
+NH_T0,5,Virus protein with function beneficial for the host | Virus replication | Virus structure
+NH_T14,9,Virus protein with function beneficial for the host | Virus replication | Virus structure
+NS_T0,5,Virus protein with function beneficial for the host | Virus replication | Virus structure
+NS_T14,9,Virus protein with function beneficial for the host | Virus replication | Virus structure
+ME_T0,8,Virus protein with function beneficial for the host | Virus replication | Virus structure
+ME_T14,10,Virus protein with function beneficial for the host | Virus replication | Virus structure
+MA_T0,6,Virus protein with function beneficial for the host | Virus replication | Virus structure
+MA_T14,9,Virus protein with function beneficial for the host | Virus replication | Virus structure
+FL_T0,6,Virus protein with function beneficial for the host | Virus replication | Virus structure
+FL_T14,7,Virus protein with function beneficial for the host | Virus replication | Virus structure
+FIELD_T0,11,Virus protein with function beneficial for the host | Virus replication | Virus structure
+FIELD_T14,8,Virus protein with function beneficial for the host | Virus replication | Virus structure
+NH_T0,26,Virus protein with function beneficial for the host | Virus structure
+NH_T14,34,Virus protein with function beneficial for the host | Virus structure
+NS_T0,13,Virus protein with function beneficial for the host | Virus structure
+NS_T14,37,Virus protein with function beneficial for the host | Virus structure
+ME_T0,11,Virus protein with function beneficial for the host | Virus structure
+ME_T14,28,Virus protein with function beneficial for the host | Virus structure
+MA_T0,13,Virus protein with function beneficial for the host | Virus structure
+MA_T14,38,Virus protein with function beneficial for the host | Virus structure
+FL_T0,19,Virus protein with function beneficial for the host | Virus structure
+FL_T14,35,Virus protein with function beneficial for the host | Virus structure
+FIELD_T0,30,Virus protein with function beneficial for the host | Virus structure
+FIELD_T14,23,Virus protein with function beneficial for the host | Virus structure
+NH_T0,0,Virus protein with function beneficial for the virus
+NH_T14,3,Virus protein with function beneficial for the virus
+NS_T0,2,Virus protein with function beneficial for the virus
+NS_T14,2,Virus protein with function beneficial for the virus
+ME_T0,2,Virus protein with function beneficial for the virus
+ME_T14,5,Virus protein with function beneficial for the virus
+MA_T0,0,Virus protein with function beneficial for the virus
+MA_T14,4,Virus protein with function beneficial for the virus
+FL_T0,2,Virus protein with function beneficial for the virus
+FL_T14,3,Virus protein with function beneficial for the virus
+FIELD_T0,3,Virus protein with function beneficial for the virus
+FIELD_T14,3,Virus protein with function beneficial for the virus
+NH_T0,4,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NH_T14,10,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NS_T0,4,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NS_T14,9,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+ME_T0,5,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+ME_T14,7,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+MA_T0,4,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+MA_T14,10,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FL_T0,4,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FL_T14,11,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FIELD_T0,8,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+FIELD_T14,2,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+NH_T0,2,Virus protein with function beneficial for the virus | Virus structure
+NH_T14,2,Virus protein with function beneficial for the virus | Virus structure
+NS_T0,1,Virus protein with function beneficial for the virus | Virus structure
+NS_T14,1,Virus protein with function beneficial for the virus | Virus structure
+ME_T0,1,Virus protein with function beneficial for the virus | Virus structure
+ME_T14,2,Virus protein with function beneficial for the virus | Virus structure
+MA_T0,1,Virus protein with function beneficial for the virus | Virus structure
+MA_T14,4,Virus protein with function beneficial for the virus | Virus structure
+FL_T0,2,Virus protein with function beneficial for the virus | Virus structure
+FL_T14,0,Virus protein with function beneficial for the virus | Virus structure
+FIELD_T0,0,Virus protein with function beneficial for the virus | Virus structure
+FIELD_T14,2,Virus protein with function beneficial for the virus | Virus structure
+NH_T0,19,Virus replication
+NH_T14,21,Virus replication
+NS_T0,20,Virus replication
+NS_T14,20,Virus replication
+ME_T0,10,Virus replication
+ME_T14,20,Virus replication
+MA_T0,9,Virus replication
+MA_T14,29,Virus replication
+FL_T0,11,Virus replication
+FL_T14,24,Virus replication
+FIELD_T0,16,Virus replication
+FIELD_T14,23,Virus replication
+NH_T0,5,Virus replication | Virus structure
+NH_T14,4,Virus replication | Virus structure
+NS_T0,2,Virus replication | Virus structure
+NS_T14,3,Virus replication | Virus structure
+ME_T0,1,Virus replication | Virus structure
+ME_T14,4,Virus replication | Virus structure
+MA_T0,1,Virus replication | Virus structure
+MA_T14,4,Virus replication | Virus structure
+FL_T0,1,Virus replication | Virus structure
+FL_T14,2,Virus replication | Virus structure
+FIELD_T0,3,Virus replication | Virus structure
+FIELD_T14,5,Virus replication | Virus structure
+NH_T0,10,Virus structure
+NH_T14,26,Virus structure
+NS_T0,8,Virus structure
+NS_T14,25,Virus structure
+ME_T0,10,Virus structure
+ME_T14,22,Virus structure
+MA_T0,5,Virus structure
+MA_T14,23,Virus structure
+FL_T0,10,Virus structure
+FL_T14,25,Virus structure
+FIELD_T0,14,Virus structure
+FIELD_T14,14,Virus structure
+SC_T0,243,Function unknown
+SC_T14,1298,Function unknown
+SC_T0,139,Virus protein with function beneficial for the host
+SC_T14,284,Virus protein with function beneficial for the host
+SC_T0,12,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+SC_T14,32,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus
+SC_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+SC_T14,2,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication
+SC_T0,5,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+SC_T14,11,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus replication | Virus structure
+SC_T0,1,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+SC_T14,8,Virus protein with function beneficial for the host | Virus protein with function beneficial for the virus | Virus structure
+SC_T0,38,Virus protein with function beneficial for the host | Virus replication
+SC_T14,71,Virus protein with function beneficial for the host | Virus replication
+SC_T0,4,Virus protein with function beneficial for the host | Virus replication | Virus structure
+SC_T14,11,Virus protein with function beneficial for the host | Virus replication | Virus structure
+SC_T0,17,Virus protein with function beneficial for the host | Virus structure
+SC_T14,41,Virus protein with function beneficial for the host | Virus structure
+SC_T0,1,Virus protein with function beneficial for the virus
+SC_T14,7,Virus protein with function beneficial for the virus
+SC_T0,5,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+SC_T14,10,Virus protein with function beneficial for the virus | Virus replication | Virus structure
+SC_T0,1,Virus protein with function beneficial for the virus | Virus structure
+SC_T14,3,Virus protein with function beneficial for the virus | Virus structure
+SC_T0,17,Virus replication
+SC_T14,27,Virus replication
+SC_T0,1,Virus replication | Virus structure
+SC_T14,4,Virus replication | Virus structure
+SC_T0,6,Virus structure
+SC_T14,34,Virus structure

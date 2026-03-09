@@ -1,0 +1,15 @@
+﻿Site,Location,Timepoint,Region,Sample_Name
+NS.T0_count,NS,T0,North,NS.T0
+NS.T14_count,NS,T14,North,NS.T14
+ME.T0_count,ME,T0,North,ME.T0
+ME.T14_count,ME,T14,North,ME.T14
+NH.T0_count,NH,T0,North,NH.T0
+NH.T14_count,NH,T14,North,NH.T14
+FIELD.T0_count,FIELD,T0,Control,FIELD.T0
+FIELD.T14_count,FIELD,T14,Control,FIELD.T14
+MA.T0_count,MA,T0,South,MA.T0
+MA.T14_count,MA,T14,South,MA.T14
+SC.T0_count,SC,T0,South,SC.T0
+SC.T14_count,SC,T14,South,SC.T14
+FL.T0_count,FL,T0,South,FL.T0
+FL.T14_count,FL,T14,South,FL.T14
